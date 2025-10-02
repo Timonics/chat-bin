@@ -67,9 +67,9 @@ Once running, visit:
 flowchart TD
     A[Client] -->|API Request| B[Controller]
     B --> C[Secret Service]
-    C -->|Encrypt/Decrypt| D[Crypto (AES-256-GCM)]
-    C -->|DB Access| E[(PostgreSQL - Prisma)]
-    C -->|Queue Jobs| F[Redis + BullMQ]
+    C -->|"Encrypt/Decrypt"| D["Crypto AES-256-GCM"]
+    C -->|"DB Access"| E[(PostgreSQL - Prisma)]
+    C -->|"Queue Jobs"| F[Redis + BullMQ]
 
     subgraph G[Background Worker]
         F --> H[Secret Cleanup Worker]
