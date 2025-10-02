@@ -63,6 +63,7 @@ Once running, visit:
 - DELETE /secrets/:token → Manually delete secret
 
 ## 🏗️ System Architecture
+```mermaid
 flowchart TD
     A[Client] -->|API Request| B[Controller]
     B --> C[Secret Service]
